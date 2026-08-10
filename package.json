@@ -14,6 +14,8 @@
     "build": "npm run build -w @sanai3i/api && npm run build -w @sanai3i/web",
     "check": "npm run check -w @sanai3i/web",
     "db:init": "npm run db:init -w @sanai3i/api",
-    "db:seed": "npm run db:seed -w @sanai3i/api"
+    "db:seed": "npm run db:seed -w @sanai3i/api",
+    "db:schema:remote": "npx wrangler d1 execute sanai3i --remote --file=packages/api/src/db/schema.sql",
+    "db:seed:remote": "npx wrangler d1 execute sanai3i --remote --file=packages/api/src/db/seed.sql"
   }
 }
