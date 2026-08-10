@@ -1,0 +1,19 @@
+{
+  "name": "صنايعي Sanai3i",
+  "short_name": "صنايعي",
+  "description": "ابحث عن صنايعي قريب منك في ثوانٍ — Find nearby technicians fast.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#d5d6db",
+  "theme_color": "#16161e",
+  "dir": "rtl",
+  "lang": "ar",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

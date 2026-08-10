@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-sans:
+		"Tajawal", "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", "Helvetica Neue",
+		sans-serif;
+
+	/* Tokyo Night palette (remaps Tailwind's default scales).
+	   amber  -> tokyo night purple (primary accent)
+	   stone  -> tokyo night light neutrals
+	   zinc   -> tokyo night dark neutrals
+	   emerald/red/sky/indigo -> tokyo green/red/cyan/blue */
+
+	--color-amber-50: #f3efff;
+	--color-amber-100: #e8dffd;
+	--color-amber-200: #d4c3fb;
+	--color-amber-300: #bb9af7;
+	--color-amber-400: #9d7ddc;
+	--color-amber-500: #7c5cd6;
+	--color-amber-600: #6b4bbf;
+	--color-amber-700: #5a3e9f;
+	--color-amber-800: #493285;
+	--color-amber-900: #3a2870;
+	--color-amber-950: #2b1c55;
+
+	--color-stone-50: #d5d6db;
+	--color-stone-100: #e9e9ed;
+	--color-stone-200: #d0d1d6;
+	--color-stone-300: #b9bbc3;
+	--color-stone-400: #9b9daa;
+	--color-stone-500: #848cb5;
+	--color-stone-600: #6b6f85;
+	--color-stone-700: #565a70;
+	--color-stone-800: #43475c;
+	--color-stone-900: #343b59;
+	--color-stone-950: #2b3054;
+
+	--color-zinc-50: #d7daf0;
+	--color-zinc-100: #c0caf5;
+	--color-zinc-200: #a9b1d6;
+	--color-zinc-300: #9aa5ce;
+	--color-zinc-400: #7a83b0;
+	--color-zinc-500: #565f89;
+	--color-zinc-600: #414868;
+	--color-zinc-700: #2f3549;
+	--color-zinc-800: #24283b;
+	--color-zinc-900: #1a1b26;
+	--color-zinc-950: #16161e;
+
+	--color-emerald-50: #eff7e4;
+	--color-emerald-100: #e3f2cd;
+	--color-emerald-200: #cde8ac;
+	--color-emerald-300: #9ece6a;
+	--color-emerald-400: #80b64c;
+	--color-emerald-500: #5f963c;
+	--color-emerald-600: #538230;
+	--color-emerald-700: #466e2a;
+	--color-emerald-900: #2c401d;
+	--color-emerald-950: #22321a;
+
+	--color-red-50: #fef0f2;
+	--color-red-100: #fddfe4;
+	--color-red-200: #fbbcc5;
+	--color-red-300: #f99ba8;
+	--color-red-400: #f78a99;
+	--color-red-500: #f7768e;
+	--color-red-600: #d9566f;
+	--color-red-700: #bf4d68;
+	--color-red-800: #9c3b57;
+	--color-red-900: #7a2b3e;
+	--color-red-950: #4d1a28;
+
+	--color-sky-100: #d7f4fc;
+	--color-sky-200: #b8ecf9;
+	--color-sky-300: #7dcfff;
+	--color-sky-400: #4dc4e8;
+	--color-sky-500: #2fa8c9;
+	--color-sky-600: #1a8fa8;
+	--color-sky-700: #007197;
+	--color-sky-800: #0c5272;
+	--color-sky-900: #0f3b4a;
+
+	--color-indigo-100: #dbe5fd;
+	--color-indigo-200: #c2d2fb;
+	--color-indigo-300: #a9c1f9;
+	--color-indigo-400: #90b0f8;
+	--color-indigo-500: #5f82d6;
+	--color-indigo-600: #5475c0;
+	--color-indigo-700: #4a64a3;
+	--color-indigo-800: #3b4f80;
+	--color-indigo-900: #26396e;
+	--color-indigo-950: #1b2850;
+
+	--color-orange-100: #ffe8d6;
+	--color-orange-200: #ffd4b0;
+	--color-orange-300: #ffb98a;
+	--color-orange-400: #ff9e64;
+	--color-orange-500: #f4854a;
+	--color-orange-600: #d96a38;
+	--color-orange-700: #b3542b;
+	--color-orange-800: #8a4021;
+	--color-orange-900: #663019;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-stone-50 text-stone-900 antialiased;
+	font-family: var(--font-sans);
+}
+
+.dark body {
+	@apply bg-zinc-950 text-zinc-100;
+}
+
+::selection {
+	background: #bb9af7;
+	color: #16161e;
+}
+
+/* RTL-aware: rely on logical utilities (ms-/me-/ps-/pe-). */
+
+@layer base {
+	input,
+	select,
+	textarea,
+	button {
+		font-family: inherit;
+	}
+}
+
+/* Simple fade for page transitions */
+@keyframes sanai3i-fade {
+	from {
+		opacity: 0;
+		transform: translateY(4px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.animate-rise {
+	animation: sanai3i-fade 0.25s ease-out;
+}

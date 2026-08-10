@@ -1,0 +1,29 @@
+{
+  "name": "@sanai3i/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "start": "tsx src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc --noEmit",
+    "db:init": "tsx src/db/init.ts",
+    "db:seed": "tsx src/db/seed.ts",
+    "deploy": "wrangler deploy",
+    "test": "tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.0",
+    "hono": "^4.13.1",
+    "jose": "^6.2.8",
+    "zod": "3.24.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260810.1",
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.120.1"
+  }
+}

@@ -1,0 +1,15 @@
+name = "sanai3i-api"
+main = "src/index.ts"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+# After `wrangler d1 create sanai3i`, put the returned database_id here.
+# Then run: wrangler d1 execute sanai3i --remote --file=src/db/schema.sql
+[[d1_databases]]
+binding = "DB"
+database_name = "sanai3i"
+database_id = "REPLACE_WITH_D1_ID"
+migrations_dir = "migrations"
+
+[vars]
+JWT_SECRET = "REPLACE_WITH_LONG_RANDOM_STRING"

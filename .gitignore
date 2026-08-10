@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+packages/api/dist/
+packages/web/build/
+packages/web/.svelte-kit/
+
+# Database (local dev)
+*.db
+*.db-shm
+*.db-wal
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+
+# Misc
+.DS_Store
+.wrangler/
