@@ -1,4 +1,4 @@
-name = "sanai3i-api"
+name = "sanai3i"
 main = "src/index.ts"
 compatibility_date = "2025-06-01"
 compatibility_flags = ["nodejs_compat"]
@@ -8,8 +8,8 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "sanai3i"
-database_id = "REPLACE_WITH_D1_ID"
+database_id = "19f61e22-84fb-4bf9-91c1-9d201b0d14b5"
 migrations_dir = "migrations"
 
 [vars]
-JWT_SECRET = "REPLACE_WITH_LONG_RANDOM_STRING"
+JWT_SECRET = "5a0435308bccdc21c342a30b024c88586f80b49a31cfe26c9f0b69beaf0b60a1"
