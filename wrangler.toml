@@ -1,0 +1,15 @@
+# Deploy config for Cloudflare's GitHub integration (which runs at the repo root).
+# Keep in sync with packages/api/wrangler.toml (used for local `wrangler dev`).
+name = "sanai3i-api"
+main = "packages/api/src/index.ts"
+compatibility_date = "2025-06-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "sanai3i"
+database_id = "REPLACE_WITH_D1_ID"
+migrations_dir = "packages/api/migrations"
+
+[vars]
+JWT_SECRET = "REPLACE_WITH_LONG_RANDOM_STRING"
