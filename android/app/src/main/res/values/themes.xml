@@ -1,0 +1,7 @@
+<resources>
+    <style name="Theme.Sanai3i" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">#402f2b</item>
+        <item name="android:navigationBarColor">#402f2b</item>
+        <item name="android:windowBackground">#f0f2f0</item>
+    </style>
+</resources>
