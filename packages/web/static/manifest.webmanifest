@@ -4,8 +4,8 @@
   "description": "ابحث عن صنايعي قريب منك في ثوانٍ — Find nearby technicians fast.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#d5d6db",
-  "theme_color": "#16161e",
+  "background_color": "#f0f2f0",
+  "theme_color": "#402f2b",
   "dir": "rtl",
   "lang": "ar",
   "icons": [

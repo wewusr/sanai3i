@@ -1,7 +1,13 @@
 name = "sanai3i"
 main = "src/index.ts"
-compatibility_date = "2025-06-01"
+compatibility_date = "2026-08-10"
 compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "../web/build"
+binding = "ASSETS"
+not_found_handling = "single-page-application"
+run_worker_first = ["/api/*"]
 
 # After `wrangler d1 create sanai3i`, put the returned database_id here.
 # Then run: wrangler d1 execute sanai3i --remote --file=src/db/schema.sql

@@ -94,7 +94,7 @@
 	</div>
 {:else}
 	<section class="animate-rise overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-stone-200 dark:bg-zinc-900 dark:ring-zinc-800">
-		<div class="h-24 bg-gradient-to-r from-[#7aa2f7] via-[#bb9af7] to-[#7dcfff]"></div>
+		<div class="h-24 bg-gradient-to-r from-[#bf6e50] via-[#bf5630] to-[#402f2b]"></div>
 		<div class="px-5 pb-5">
 			<div class="-mt-8 mb-3 flex items-end justify-between gap-3">
 				<span class="grid h-20 w-20 place-items-center rounded-3xl bg-white text-4xl shadow ring-1 ring-stone-200 dark:bg-zinc-800 dark:ring-zinc-700">
