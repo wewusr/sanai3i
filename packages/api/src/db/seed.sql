@@ -46,43 +46,43 @@ WHERE NOT EXISTS (SELECT 1 FROM trades WHERE name_en = 'Locksmith');
 
 -- Demo technicians
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'عم محمود السيد', 'm.sayed@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000001', 'المعادي', 29.965, 31.25, 1
+SELECT 'technician', 'عم محمود السيد', 'm.sayed@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000001', 'المعادي', 29.965, 31.25, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'm.sayed@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'أحمد سامي', 'a.samy@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000002', 'مصر الجديدة', 30.089, 31.336, 1
+SELECT 'technician', 'أحمد سامي', 'a.samy@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000002', 'مصر الجديدة', 30.089, 31.336, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'a.samy@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'خالد حسن', 'k.hassan@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000003', 'الزمالك', 30.056, 31.22, 1
+SELECT 'technician', 'خالد حسن', 'k.hassan@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000003', 'الزمالك', 30.056, 31.22, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'k.hassan@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'إبراهيم عادل', 'i.adel@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000004', 'العباسية', 30.069, 31.272, 1
+SELECT 'technician', 'إبراهيم عادل', 'i.adel@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000004', 'العباسية', 30.069, 31.272, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'i.adel@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'مصطفى كمال', 'm.kamal@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000005', 'المقطم', 30.015, 31.28, 1
+SELECT 'technician', 'مصطفى كمال', 'm.kamal@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000005', 'المقطم', 30.015, 31.28, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'm.kamal@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'طارق فؤاد', 't.fouad@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000006', 'الفيوم', 29.309, 30.842, 1
+SELECT 'technician', 'طارق فؤاد', 't.fouad@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000006', 'الفيوم', 29.309, 30.842, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 't.fouad@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'وليد النجار', 'w.naggar@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000007', 'حلوان', 29.84, 31.33, 1
+SELECT 'technician', 'وليد النجار', 'w.naggar@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000007', 'حلوان', 29.84, 31.33, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'w.naggar@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'كريم مصطفى', 'k.mostafa@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000008', 'الشروق', 30.12, 31.64, 1
+SELECT 'technician', 'كريم مصطفى', 'k.mostafa@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000008', 'الشروق', 30.12, 31.64, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'k.mostafa@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'فادي تامر', 'f.tamer@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000009', 'الهرم', 29.98, 31.13, 1
+SELECT 'technician', 'فادي تامر', 'f.tamer@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000009', 'الهرم', 29.98, 31.13, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'f.tamer@tech.sanai3i.test');
 
 INSERT INTO users (type, full_name, email, password_hash, phone, area, lat, lng, location_notice_seen)
-SELECT 'technician', 'شريف رمزي', 's.ramzy@tech.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01000000010', 'وسط البلد', 30.05, 31.24, 1
+SELECT 'technician', 'شريف رمزي', 's.ramzy@tech.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01000000010', 'وسط البلد', 30.05, 31.24, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 's.ramzy@tech.sanai3i.test');
 
 -- Link users to technician profiles
@@ -148,7 +148,7 @@ WHERE u.email = 's.ramzy@tech.sanai3i.test' AND tr.name_en = 'Locksmith'
 
 -- Demo client
 INSERT INTO users (type, full_name, email, password_hash, phone, address, area, lat, lng, location_notice_seen)
-SELECT 'user', 'أحمد محمد', 'client@demo.sanai3i.test', 'pbkdf2$210000$73616e616933692d736565642d73616c742d313662$fa6e8292e43efea6c2c09895b8e43fabf3652f8a64fb3ebb53e6d5d46b0dae88', '01111111111', 'شارع التسعين، المعادي', 'المعادي', 29.97, 31.25, 1
+SELECT 'user', 'أحمد محمد', 'client@demo.sanai3i.test', 'pbkdf2$100000$73616e616933692d736565642d73616c742d313662$2c4f5ffa29e57dcd1d127f8b0f31c4afefe1e496a083f2ff14068d106092ccbd', '01111111111', 'شارع التسعين، المعادي', 'المعادي', 29.97, 31.25, 1
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'client@demo.sanai3i.test');
 
 -- Completed booking + 5-star review for the plumber

@@ -4,7 +4,7 @@
  * Stored format: pbkdf2$<iterations>$<saltHex>$<hashHex>
  */
 
-const ITERATIONS = 210_000;
+const ITERATIONS = 100_000;
 const KEY_LEN = 32; // bytes (256-bit)
 
 function toHex(bytes: Uint8Array): string {
