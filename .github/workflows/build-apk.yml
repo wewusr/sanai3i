@@ -25,13 +25,51 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
+      - name: Create signing keystore
+        run: |
+          if [ -n "${{ secrets.KEYSTORE_B64 }}" ]; then
+            echo "${{ secrets.KEYSTORE_B64 }}" | base64 -d > release.jks
+            echo "${{ secrets.KEYSTORE_PASSWORD }}" > keystore-pass.txt
+            echo "${{ secrets.KEY_PASSWORD }}" > key-pass.txt
+            echo "using stored keystore"
+          else
+            keytool -genkeypair -v \
+              -keystore release.jks \
+              -storepass sanai3i-release \
+              -keypass sanai3i-release \
+              -alias sanai3i \
+              -keyalg RSA -keysize 2048 -validity 10000 \
+              -dname "CN=Sanai3i, OU=Mobile, O=Sanai3i, L=Cairo, C=EG"
+            echo "sanai3i-release" > keystore-pass.txt
+            echo "sanai3i-release" > key-pass.txt
+            echo "generated new keystore"
+          fi
+
+      - name: Export signing env
+        run: |
+          echo "KEYSTORE_PASSWORD=$(cat keystore-pass.txt)" >> "$GITHUB_ENV"
+          echo "KEY_PASSWORD=$(cat key-pass.txt)" >> "$GITHUB_ENV"
+
       - name: Build release APK
         working-directory: android
+        env:
+          KEYSTORE_PATH: ../release.jks
+          KEY_ALIAS: sanai3i
         run: ./gradlew assembleRelease --no-daemon
+
+      - name: Upload signing keystore
+        uses: actions/upload-artifact@v4
+        with:
+          name: sanai3i-keystore
+          path: |
+            release.jks
+            keystore-pass.txt
+            key-pass.txt
+          if-no-files-found: error
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: sanai3i-apk
-          path: android/app/build/outputs/apk/release/app-release.apk
+          path: android/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
